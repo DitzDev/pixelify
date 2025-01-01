@@ -208,6 +208,7 @@ public class MainActivity extends AppCompatActivity {
     templates.add(new ResolutionTemplate("iPad View", 1536, 2080, 384, 2.0f, "8.3\""));
     templates.add(new ResolutionTemplate("iPad (2021)", 1620, 2160, 264, 2.0f, "10.2\""));
     templates.add(new ResolutionTemplate("iPhone 13 Pro max (2021)", 1284, 2778, 340, 3.0f, "6.68\""));
+    templates.add(new ResolutionTemplate("iPhone 8 Plus (2017)", 1080, 1920, 401, 3.0f, "5.5\""));
     return templates;
   }
 
