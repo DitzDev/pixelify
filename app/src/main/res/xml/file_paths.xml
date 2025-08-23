@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <external-files-path
+        name="crash_logs"
+        path="." />
+    <external-files-path
+        name="crash_reports"
+        path="crash_reports" />
+</paths>
