@@ -14,11 +14,10 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import com.google.android.material.snackbar.Snackbar;
+import ditzdevs.pixelify.me.R;
 import ditzdevs.pixelify.me.databinding.FragmentShizukuBinding;
 import ditzdevs.pixelify.me.utils.PermissionsHelper;
 import rikka.shizuku.Shizuku;
-import rikka.shizuku.ShizukuRemoteProcess;
 
 public class ShizukuFragment extends Fragment {
     
@@ -53,7 +52,7 @@ public class ShizukuFragment extends Fragment {
                 navigateToMain();
             } else {
                 Toast.makeText(requireContext(), 
-                    "Shizuku is not ready. Please complete the setup.", 
+                    getString(R.string.shizuku_not_ready), 
                     Toast.LENGTH_SHORT).show();
             }
         });
@@ -73,7 +72,7 @@ public class ShizukuFragment extends Fragment {
             startActivity(intent);
         } catch (Exception e) {
             Log.e(TAG, "Cannot open browser", e);
-            Toast.makeText(requireContext(), "Cannot open browser", Toast.LENGTH_SHORT).show();
+            Toast.makeText(requireContext(), getString(R.string.cannot_open_browser), Toast.LENGTH_SHORT).show();
         }
     }
     
@@ -81,28 +80,27 @@ public class ShizukuFragment extends Fragment {
         Log.d(TAG, "Attempting to connect to Shizuku");
      
         if (!PermissionsHelper.isShizukuInstalled(requireContext())) {
-            Toast.makeText(requireContext(), "Shizuku not installed", Toast.LENGTH_SHORT).show();
+            Toast.makeText(requireContext(), getString(R.string.shizuku_not_installed), Toast.LENGTH_SHORT).show();
             return;
         }
         
         if (!PermissionsHelper.isShizukuRunning()) {
             Toast.makeText(requireContext(), 
-                "Shizuku service not found. Please start Shizuku first.", 
+                getString(R.string.shizuku_service_not_found), 
                 Toast.LENGTH_LONG).show();
             return;
         }
         
         if (PermissionsHelper.hasShizukuPermission()) {
             Log.d(TAG, "Shizuku already connected");
-            Toast.makeText(requireContext(), "Shizuku is already connected!", Toast.LENGTH_SHORT).show();
-            // Tidak langsung navigasi, hanya update status
+            Toast.makeText(requireContext(), getString(R.string.shizuku_already_connected), Toast.LENGTH_SHORT).show();
             updateStatus();
         } else {
             try {
                 Shizuku.requestPermission(REQUEST_CODE_SHIZUKU);
             } catch (Exception e) {
                 Log.e(TAG, "Error requesting Shizuku permission", e);
-                Toast.makeText(requireContext(), "Failed to request permission", Toast.LENGTH_SHORT).show();
+                Toast.makeText(requireContext(), getString(R.string.failed_to_request_permission), Toast.LENGTH_SHORT).show();
             }
         }
     }
@@ -119,19 +117,19 @@ public class ShizukuFragment extends Fragment {
             Log.d(TAG, String.format("Status - Installed: %b, Running: %b, ShizukuPerm: %b, Ready: %b",
                 isInstalled, isRunning, hasShizukuPermission, shizukuReady));
         
-            binding.installStatus.setText(isInstalled ? "✓ Installed" : "✗ Not installed");
+            binding.installStatus.setText(isInstalled ? getString(R.string.status_installed) : getString(R.string.status_not_installed));
             binding.installStatus.setTextColor(getResources().getColor(
                 isInstalled ? android.R.color.holo_green_dark : android.R.color.holo_red_dark, null));
             
-            binding.serviceStatus.setText(isRunning ? "✓ Running" : "✗ Not running");
+            binding.serviceStatus.setText(isRunning ? getString(R.string.status_running) : getString(R.string.status_not_running));
             binding.serviceStatus.setTextColor(getResources().getColor(
                 isRunning ? android.R.color.holo_green_dark : android.R.color.holo_red_dark, null));
       
             String permissionText;
             if (hasShizukuPermission) {
-                permissionText = "✓ Shizuku permission granted";
+                permissionText = getString(R.string.status_shizuku_permission_granted);
             } else {
-                permissionText = "✗ No permission";
+                permissionText = getString(R.string.status_no_permission);
             }
             
             binding.permissionStatusShizuku.setText(permissionText);
@@ -144,13 +142,13 @@ public class ShizukuFragment extends Fragment {
             binding.continueShizuku.setEnabled(shizukuReady);
        
             if (!isInstalled) {
-                binding.connectShizuku.setText("Install Shizuku First");
+                binding.connectShizuku.setText(getString(R.string.install_shizuku_first));
             } else if (!isRunning) {
-                binding.connectShizuku.setText("Start Shizuku Service");
+                binding.connectShizuku.setText(getString(R.string.start_shizuku_service));
             } else if (!hasShizukuPermission) {
-                binding.connectShizuku.setText("Grant Shizuku Permission");
+                binding.connectShizuku.setText(getString(R.string.grant_shizuku_permission));
             } else {
-                binding.connectShizuku.setText("Shizuku Connected");
+                binding.connectShizuku.setText(getString(R.string.shizuku_connected));
                 binding.connectShizuku.setEnabled(false);
             }
             
@@ -186,11 +184,11 @@ public class ShizukuFragment extends Fragment {
                 if (grantResult == PackageManager.PERMISSION_GRANTED) {
                     Log.d(TAG, "Shizuku permission granted");
                     Toast.makeText(requireContext(), 
-                        "Shizuku permission granted! You can now continue.", 
+                        getString(R.string.shizuku_permission_granted_continue), 
                         Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(requireContext(), 
-                        "Shizuku permission denied", Toast.LENGTH_SHORT).show();
+                        getString(R.string.shizuku_permission_denied), Toast.LENGTH_SHORT).show();
                 }
                 updateStatus();
             }

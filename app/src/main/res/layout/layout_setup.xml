@@ -15,7 +15,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            app:title="Setup Permissions" />
+            app:title="@string/title_page_setup" />
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tab_layout"

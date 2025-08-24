@@ -17,11 +17,11 @@
             android:id="@+id/collapsing_toolbar"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:contentScrim="?attr/colorPrimaryContainer"
+            app:contentScrim="?attr/colorSurfaceContainer"
             app:expandedTitleMarginBottom="24dp"
             app:expandedTitleMarginStart="24dp"
             app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
-            app:title="Settings">
+            app:title="@string/settings">
 
             <ImageView
                 android:id="@+id/backdrop"
@@ -73,7 +73,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="12dp"
-                        android:text="Display"
+                        android:text="@string/display"
                         android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
                         android:textColor="?attr/colorPrimary" />
 
@@ -106,14 +106,14 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Theme"
+                                android:text="@string/theme"
                                 android:textAppearance="@style/TextAppearance.Material3.BodyLarge" />
 
                             <TextView
                                 android:id="@+id/theme_summary"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Follow System"
+                                android:text="@string/follow_system"
                                 android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
                                 android:textColor="?attr/colorOnSurfaceVariant" />
 
@@ -143,7 +143,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="12dp"
-                        android:text="General"
+                        android:text="@string/general"
                         android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
                         android:textColor="?attr/colorPrimary" />
 
@@ -176,14 +176,14 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Language"
+                                android:text="@string/language"
                                 android:textAppearance="@style/TextAppearance.Material3.BodyLarge" />
 
                             <TextView
                                 android:id="@+id/language_summary"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Follow System"
+                                android:text="@string/follow_system"
                                 android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
                                 android:textColor="?attr/colorOnSurfaceVariant" />
 
@@ -213,7 +213,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="12dp"
-                        android:text="Features"
+                        android:text="@string/features"
                         android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
                         android:textColor="?attr/colorPrimary" />
 
@@ -242,13 +242,13 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Smart Alert"
+                                android:text="@string/smart_alert"
                                 android:textAppearance="@style/TextAppearance.Material3.BodyLarge" />
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Get intelligent notifications"
+                                android:text="@string/smart_alert_description"
                                 android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
                                 android:textColor="?attr/colorOnSurfaceVariant" />
 
@@ -294,13 +294,13 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Control Panel Resolution"
+                                android:text="@string/control_panel_resolution"
                                 android:textAppearance="@style/TextAppearance.Material3.BodyLarge" />
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Enable advanced resolution controls"
+                                android:text="@string/control_panel_resolution_description"
                                 android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
                                 android:textColor="?attr/colorOnSurfaceVariant" />
 
@@ -336,7 +336,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="12dp"
-                        android:text="About"
+                        android:text="@string/about"
                         android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
                         android:textColor="?attr/colorPrimary" />
 
@@ -369,14 +369,14 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Reset Settings"
+                                android:text="@string/reset_settings"
                                 android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
                                 android:textColor="?attr/colorError" />
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Restore default settings"
+                                android:text="@string/reset_settings_description"
                                 android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
                                 android:textColor="?attr/colorOnSurfaceVariant" />
 

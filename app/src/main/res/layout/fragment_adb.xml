@@ -21,7 +21,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="ADB Setup"
+                android:text="@string/adb_setup_title"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:layout_marginBottom="8dp" />
@@ -29,7 +29,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Grant WRITE_SECURE_SETTINGS permission via ADB command"
+                android:text="@string/adb_setup_desc"
                 android:textSize="14sp"
                 android:alpha="0.7" />
 
@@ -52,7 +52,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Steps:"
+                android:text="@string/steps_title"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:layout_marginBottom="12dp" />
@@ -60,19 +60,19 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="1. Enable USB Debugging in Developer Options"
+                android:text="@string/step_1"
                 android:layout_marginBottom="8dp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="2. Connect your device to computer via USB"
+                android:text="@string/step_2"
                 android:layout_marginBottom="8dp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="3. Run the following ADB command:"
+                android:text="@string/step_3"
                 android:layout_marginBottom="8dp" />
 
             <com.google.android.material.card.MaterialCardView
@@ -87,7 +87,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="12dp"
-                    android:text="adb shell pm grant ditzdevs.pixelify.me android.permission.WRITE_SECURE_SETTINGS"
+                    android:text="@string/adb_command"
                     android:textColor="@android:color/white"
                     android:fontFamily="monospace"
                     android:textIsSelectable="true" />
@@ -98,7 +98,7 @@
                 android:id="@+id/copy_command"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Copy Command"
+                android:text="@string/copy_command"
                 style="@style/Widget.Material3.Button.TonalButton" />
 
         </LinearLayout>
@@ -120,7 +120,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Permission Status"
+                android:text="@string/permission_status_title"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:layout_marginBottom="8dp" />
@@ -129,7 +129,7 @@
                 android:id="@+id/permission_status"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Checking permission..."
+                android:text="@string/permission_checking"
                 android:textSize="14sp" />
 
             <com.google.android.material.button.MaterialButton
@@ -137,7 +137,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
-                android:text="Continue"
+                android:text="@string/continue_button"
                 android:enabled="false" />
 
         </LinearLayout>

@@ -21,7 +21,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Shizuku Setup"
+                android:text="@string/title_shizuku_setup"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:layout_marginBottom="8dp" />
@@ -29,7 +29,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Use Shizuku to grant permissions without computer"
+                android:text="@string/desc_shizuku_setup"
                 android:textSize="14sp"
                 android:alpha="0.7" />
 
@@ -52,7 +52,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Shizuku Status"
+                android:text="@string/shizuku_status_title"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:layout_marginBottom="12dp" />
@@ -67,13 +67,13 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Installation:" />
+                    android:text="@string/installation_label" />
 
                 <TextView
                     android:id="@+id/install_status"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Checking..." />
+                    android:text="@string/status_checking" />
 
             </LinearLayout>
 
@@ -87,13 +87,13 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Service:" />
+                    android:text="@string/service_label" />
 
                 <TextView
                     android:id="@+id/service_status"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Checking..." />
+                    android:text="@string/status_checking" />
 
             </LinearLayout>
 
@@ -106,13 +106,13 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Permission:" />
+                    android:text="@string/permission_label" />
 
                 <TextView
                     android:id="@+id/permission_status_shizuku"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Checking..." />
+                    android:text="@string/status_checking" />
 
             </LinearLayout>
 
@@ -135,7 +135,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Actions"
+                android:text="@string/actions_title"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:layout_marginBottom="12dp" />
@@ -145,7 +145,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:text="Install Shizuku"
+                android:text="@string/install_shizuku"
                 style="@style/Widget.Material3.Button.TonalButton" />
 
             <com.google.android.material.button.MaterialButton
@@ -153,14 +153,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:text="Connect to Shizuku"
+                android:text="@string/connect_to_shizuku"
                 android:enabled="false" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/continue_shizuku"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Continue"
+                android:text="@string/continue_button"
                 android:enabled="false" />
 
         </LinearLayout>
